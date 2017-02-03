@@ -94,6 +94,8 @@ $./deploy.sh
 $reboot
 `
 reboot後、[Advanced Option for Arch Linux]で自分でカスタムしたカーネルを選択。
+![screen shot 2017-01-30 at 16 42 05](https://cloud.githubusercontent.com/assets/17031124/22594559/e3d5cdc6-ea66-11e6-8635-50571c1406bb.png)
+
 
 これでシステムコール実装は終わるが、自分の自作システムコールのテストも行う。
 今回はGNU Cライブラリのsyscall( )関数を使い、自作システムコールを呼び出すテストプログラムを作る。
@@ -136,3 +138,5 @@ $ ./test 'Hello World!'
 `
 
 実行結果と、端末に出力される情報を取得するdmesgを使いシステムコールのログを抽出したもの。
+![screen shot 2017-01-30 at 17 10 29](https://cloud.githubusercontent.com/assets/17031124/22594568/ef097d64-ea66-11e6-88f6-1c8268436f0b.png)
+
