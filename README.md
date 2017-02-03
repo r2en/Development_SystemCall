@@ -11,7 +11,7 @@ Linuxソースコードを取得し、改造した上でビルド、コンパイ
 そのため、仮想マシン上VM(VirtualBox)に仮想ハードドライブ(ArchLinuxのVDIファイル) :[201608 CLI 64bit](http://www.osboxes.org/archlinux/)を試す。
 
 VM起動後、Linuxビルド時にbcコマンドが必要になる為、root権限( su 等  )で入れる
-`$pacman -S bc`
+<br>`$pacman -S bc`
 
 ※ この時、`pacman -Syu`コマンドでVMをアップデートしてしまうと、過去バージョンが削除されたために発生するエラーがでるのでしないように注意
 
