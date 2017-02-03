@@ -4,7 +4,6 @@
 
 システムコールとは**ユーザが実行したい操作をユーザの代わりに実行するように、OSのカーネルに対して要求する手段**である。<br>
 
-<br>
 
 システムコールは通常の関数の動作とは異なり、CPU割り込みを発生させCPUに対してカーネルモードに切り替えることを要求し、<br>
 カーネル内であらかじめ定義された場所に移動し、要求された処理をsyscallやsysenterの命令により実現する。<br>
@@ -50,7 +49,6 @@ Linuxのコードは割り込みやシステムコール等の処理の為、ア
 64bitのCPUにシステムコール名とシステムコールを実装する関数の名前をテーブルに書く。<br>
 これはスクリプトに読まれボイラープレートコードの一部として生成される。<br>
 
-<br>
 <br>` $ vi arch/x86/entry/syscalls/syscall_64.tbl `
 <br>` $ 329 common    xxxhal     sys_xxxhal `
 <br>
@@ -73,11 +71,10 @@ $ SYSCALL_DEFINE1(xxxhal,char *,msg)
 <br>
 カーネルとカーネルのモジュールをmakeコマンドで実行し、arch/x86_64/boot/bzImageファイルを生成後、<br>
 make modules_installで/lib/modules/KERNEL_VERSIONにコンパイルし、コピーする。<br>
-<br>
+
 ```
 $ vi linux-4.6.7/deploy.sh
 ```
-<br>
 
 ``` bash:
 $#!/usr/bin/bash
